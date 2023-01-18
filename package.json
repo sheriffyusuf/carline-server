@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "ts-node-dev --no-notify --respawn --transpile-only src/index.ts",
-    "build": "tsc",
-    "start": "node dist/src"
+    "build": "prisma generate && tsc",
+    "start": "node dist"
   },
   "dependencies": {
     "@prisma/client": "4.8.1",
