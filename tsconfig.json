@@ -11,6 +11,7 @@
       "ES2016",
       "dom"
     ], /* Specify library files to be included in the compilation. */
+    "baseUrl": ".",
     "outDir": "dist", /* Redirect output structure to the directory. */
     "strict": true, /* Enable all strict type-checking options. */
     "strictPropertyInitialization": false, /* Enable strict checking of property initialization in classes. */
