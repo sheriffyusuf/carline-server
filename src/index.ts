@@ -19,7 +19,7 @@ const main = async () => {
     resolvers,
   });
 
-  const server = new ApolloServer({ schema });
+  const server = new ApolloServer({ schema, introspection: true });
 
   const { url } = await startStandaloneServer(server, {
     context: async () => await context(),
