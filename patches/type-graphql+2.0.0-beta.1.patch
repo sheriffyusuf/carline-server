@@ -1,0 +1,14 @@
+diff --git a/node_modules/type-graphql/dist/resolvers/validate-arg.js b/node_modules/type-graphql/dist/resolvers/validate-arg.js
+index 60186e5..a76fc05 100644
+--- a/node_modules/type-graphql/dist/resolvers/validate-arg.js
++++ b/node_modules/type-graphql/dist/resolvers/validate-arg.js
+@@ -39,6 +39,9 @@ async function validateArg(argValue, argType, globalValidate, argValidate) {
+     if (validatorOptions.skipMissingProperties !== false) {
+         validatorOptions.skipMissingProperties = true;
+     }
++    if (validatorOptions.forbidUnknownValues !== true) {
++        validatorOptions.forbidUnknownValues = false;
++    }
+     const { validateOrReject } = await Promise.resolve().then(() => __importStar(require("class-validator")));
+     try {
+         if (Array.isArray(argValue)) {
