@@ -2,7 +2,9 @@
   "name": "graphql-typegraphql-crud",
   "version": "1.0.0",
   "scripts": {
-    "dev": "ts-node-dev --no-notify --respawn --transpile-only src/index.ts"
+    "dev": "ts-node-dev --no-notify --respawn --transpile-only src/index.ts",
+    "build": "tsc",
+    "start": "node dist/src"
   },
   "dependencies": {
     "@prisma/client": "4.8.1",
