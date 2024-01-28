@@ -95,10 +95,7 @@ export class UserResolver {
       }
 
       //3
-      const token = jwt.sign(
-        { id: existingUser.id },
-        process.env.SECRET_KEY || ""
-      );
+      const token = jwt.sign({ id: existingUser.id }, process.env.JWT_SECRET);
       return {
         value: true,
         user: existingUser,
